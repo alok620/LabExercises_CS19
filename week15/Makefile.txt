@@ -1,0 +1,8 @@
+list: main.o
+        g++ -o list main.o
+
+main.o: main.cpp LinkedList.h Stack.h Queue.h
+        g++ -c -g -Wall -Wpedantic -Wextra main.cpp
+
+clean:
+        rm -f *.o *~

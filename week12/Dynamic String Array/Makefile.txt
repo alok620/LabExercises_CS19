@@ -1,0 +1,11 @@
+dsa: main.o DynamicStringArray.o
+        g++ -o dsa main.o DynamicStringArray.o
+
+main.o: main.cpp DynamicStringArray.h
+        g++ -c main.cpp
+
+IntSet.o: DynamicStringArray.h DynamicStringArray.cpp
+        g++ -c DynamicStringArray.cpp
+
+clean:
+        rm -f *.o *~
